@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding: 0 100px 0 100px;
+}
+
+nav ul,
+.main-info-section,
+.MyHobbies h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body {
+    background-color: #252627;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+    font-size: 1.5rem;
+}
+
+.navbar {
+    background-color: #181818;
+}
+
+.about h1,
+.skills h1,
+.MyHobbies h1 {
+    color: lightpink;
+}
+
+header h1,
+header a {
+    color: salmon;
+}
+
+li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+}
+
+.main-info-section {
+    height: calc(100vh - 81.6px);
+}
+
+.text {
+    margin-top: 120px;
+}
+
+.text h1 {
+    color: lightyellow;
+    font-size: 3rem;
+    cursor: context-menu;
+}
+
+.text span {
+    display: inline-block;
+    font-size: 4rem;
+}
+
+span:hover {
+    color: orange;
+    transition: all .5s;
+}
+
+span.m-left {
+    margin-left: -10px;
+}
+
+.dp {
+    width: 450px;
+    margin-top: 50px;
+    justify-content: center;
+    align-content: center;
+}
+
+
+/* chappri dpchange krrni h 
+ ABOUT*/
+
+.about {
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.about h1,
+.skills h1,
+.MyHobbies h1 {
+    font-size: 10rem;
+    z-index: 0;
+    opacity: .1;
+}
+
+.about-me-info {
+    max-width: 900px;
+    background-color: #252627;
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, .25);
+    padding: 50px;
+    position: relative;
+    top: -70px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.about-me-info p {
+    font-size: 1.3rem;
+    color: #BEBEBE;
+}
+
+.about-me-info p:nth-child(2),
+.about-me-info p:last-child {
+    margin-top: 30px;
+}
+
+.about img {
+    width: 300px;
+    position: relative;
+    top: -300px;
+    left: calc(100% - 100px);
+    right: calc(100% - 100px);
+    transform: translateX(calc(-100% + 100px));
+}
+
+
+/* Skills */
+
+.skills {
+    height: 100vh;
+}
+
+.skills h1 {
+    text-align: right;
+}
+
+.skills-info {
+    font-size: 1.4rem;
+    color: #BEBEBE;
+    max-width: 700px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX((-50%));
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.badminton,
+.c,
+.napping,
+.audacity {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+div[class^='tag-'] {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 50%, 0% 0%);
+    width: 120px;
+    height: 30px;
+    background-color: #1785A7;
+    margin-right: 30px;
+}
+
+div[class^='tag'] p {
+    color: #fff;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    padding-top: 3px;
+}
+
+.taara {
+    color: snow;
+    font-size: 1.4rem;
+}
+
+.hobimg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    position: relative;
+}
+
+.MyHobbies {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+}
+
+.dp img {
+    border-radius: 50%;
+    border: 3px solid #BEBEBE;
+    padding: 4px;
+    width: 300px;
+    position: absolute;
+    top: 45%;
+    left: 70%;
+    transform: translate(-50%, -50%)
+}
+
+
+/* HOVER */
+
+.HI {
+    position: relative;
+    width: 400px;
+    justify-content: center;
+    align-content: center;
+}
+
+.sprts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-family: 'quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.sprts>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.sprts:hover {
+    opacity: 1;
+}
+
+.sprts:hover>* {
+    transform: translateY(0);
+}
+
+.gaming {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-family: 'quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.gaming>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.gaming:hover {
+    opacity: 1;
+}
+
+.gaming:hover>* {
+    transform: translateY(0);
+}
+
+.novel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-family: 'quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.novel>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.novel:hover {
+    opacity: 1;
+}
+
+.novel:hover>* {
+    transform: translateY(0);
+}
+
+.workout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-family: 'quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.workout>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.workout:hover {
+    opacity: 1;
+}
+
+.workout:hover>* {
+    transform: translateY(0);
+}
+
+.about-me-info span {
+    color: lightpink;
+}
+
+.skills-info span {
+    font-size: 1.8rem;
+}
